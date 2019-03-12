@@ -1,0 +1,462 @@
+
+
+
+
+First Test
+
+The parametres of the first test are 
+
+Safe : false
+
+Fair : false
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : false
+
+LimitAdjustment : 0
+
+
+Console outpout 
+
+=================Bridge=====================
+                                                                      ====================Arrivals ==============                              ================== Cars Waiting ============                    ========== Adjustments =============          
+ 
+
+Blue Car  has just start passing the bridge 36:21:729
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                            Blue Car with  has just arrived  36:21:729 
+
+                                                                            Blue Car with  has just arrived  36:22:590 
+
+                                                                                                                                        Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 36:22:596
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+                                                                            Blue Car with  has just arrived  36:23:590 
+
+                                                                                                                                          Cars :   (1 0)
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just start passing the bridge 36:23:596
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  has just finished 36:23:731
+
+                                                                            Blue Car with  has just arrived  36:24:590 
+
+                                                                                                                                         Cars :   (1 0)
+
+Blue Car  has just finished 36:24:596
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just start passing the bridge 36:24:596
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                             Red Car with  has just arrived  36:25:591 
+                                                                                                                                          Cars :   (0 1)
+
+Red Car has just start passing the bridge 36:25:596
+
+CARS HAS JUST CRUSHED -- CARS HAS JUST CRUSHED
+Blue Car  has just finished 36:25:599
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+
+Comment First Test  
+
+-For the first test we have an unsafe and unfair simulation with an arrival rate of 1 car per second and a transit time of 2 seconds . 
+-Ás it turns out four blue cars are produced in the series and start at different times to cross the bridges because they are of the same type we have no conflict
+-At the time of 36: 25: 591, a red car arrives at the bridge, we have an unsafe passage, the car starts its passage.
+-Âecause there is a blue car on the bridge while the red begins we have a conflict as it seems.
+
+
+
+
+
+
+Second Test 
+
+
+Safe : true
+
+Fair : false
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : false
+
+LimitAdjustment : 0
+
+
+
+=================Bridge=====================
+                                                                      ====================Arrivals ==============                              ================== Cars Waiting ============                    ========== Adjustments =============                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 57:51:495
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                            Blue Car with  has just arrived  57:51:495 
+
+                                                                            Blue Car with  has just arrived  57:52:435 
+
+                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+                                                                             Red Car with  has just arrived  57:53:434 
+
+Blue Car  has just finished 57:53:498
+
+                                                                                                                                                           Cars :   (0 1)
+
+Blue Car  has just start passing the bridge 57:53:500
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                             Red Car with  has just arrived  57:54:435 
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+                                                                             Red Car with  has just arrived  57:55:434 
+
+Blue Car  has just finished 57:55:501
+
+                                                                                                                                                           Cars :   (0 2)
+
+Red Car has just start passing the bridge 57:55:503
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 57:57:504
+
+                                                                                                                                                           Cars :   (0 1)
+
+Red Car has just start passing the bridge 57:57:505
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 57:59:506
+
+Red Car has just start passing the bridge 57:59:509
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 58:01:510
+
+
+
+
+Comment Second Test 
+
+
+-For the first test we have an safe and unfair simulation with an arrival rate of 1 car per second and a transit time of 2 seconds .
+-Because is a safe proccess there is not going to have a conflict . We noticed that no car starts as long as there is another on the bridge
+- The fact that the simulation is unfair is seen in the drive of cars . For example at the moment 57:53:434  a Red car arrived the previous has which is blue one finished at the moment 57:53:498 with a fair simulation it should
+  for a red car to start passing but at the moment 57:53:500 a blue car start again to pass the bridge .
+
+
+
+Thrid Test 
+
+
+Safe : false
+
+Fair : true
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : false
+
+LimitAdjustment : 0
+
+
+
+=================Bridge=====================
+                                                                      ====================Arrivals ==============                              ================== Cars Waiting ============                    ========== Adjustments =============                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 04:55:773
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                            Blue Car with  has just arrived  04:55:772 
+
+                                                                             Red Car with  has just arrived  04:56:721 
+
+                                                                                                                                                           Cars :   (0 1)
+
+Red Car has just start passing the bridge 04:56:725
+
+CARS HAS JUST CRUSHED -- CARS HAS JUST CRUSHED
+
+
+
+Comment Second Test 
+
+-For the first test we have an unsafe and fair simulation withou adjstument with an arrival rate of 1 car per second and a transit time of 2 seconds .
+- Because is a safe proccess there is going to have a conflict with a high probability and so there is at the moment  04:56:725 when the red car which arrived at the moment 04:56:721  start to passing the bridge 
+ while a blue a car is on her.
+
+
+
+Fourth Test 
+
+
+Safe : false
+
+Fair : true
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : true
+
+LimitAdjustment : 3
+
+
+
+=================Bridge=====================
+                                                                      ====================Arrivals ==============                              ================== Cars Waiting ============                    ========== Adjustments =============                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 13:13:922
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+                                                                            Blue Car with  has just arrived  13:13:924 
+
+                                                                            Blue Car with  has just arrived  13:14:860 
+
+                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 13:14:862
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+                                                                            Blue Car with  has just arrived  13:15:861 
+
+                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 13:15:863
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just finished 13:15:924
+
+                                                                            Blue Car with  has just arrived  13:16:860 
+
+                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just start passing the bridge 13:16:862
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just finished 13:16:864
+
+                                                                            Blue Car with  has just arrived  13:17:861 
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+                                                                                                                                                           Cars :   (1 0)
+
+Blue Car  has just finished 13:17:864
+
+Blue Car  has just start passing the bridge 13:17:864
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  has just finished 13:18:863
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just finished 13:19:864
+
+Comment Fourth Test
+
+-For the fourth test we have an unsafe and fair simulation with adjstument with an arrival rate of 1 car per second and a transit time of 2 seconds .
+- Because is a safe proccess there is going to have a conflict with a high probability but against to the great chance we do not have . This is a rare example because needs the oncoming arrival of
+  same cars in this case we have five blue cars
+- In this example is without meaning the true adjustment value because is unsafe . The high probability of conflict has the effect of ending through the conflict before it comes to some adjustment.
+
+
+Fifth Test 
+
+
+Safe : true
+
+Fair : true
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : false
+
+LimitAdjustment : 0
+
+
+
+=================Bridge=====================
+                                                                      ====================Arrivals ==============                              ================== Cars Waiting ============                    ========== Adjustments =============                                                                                                                                                           Cars :   (0 0)
+
+                                                                             Red Car with  has just arrived  20:35:837 
+
+Red Car has just start passing the bridge 20:35:839
+
+Red Car is on the bridge it has 1 seconds more  
+
+                                                                             Red Car with  has just arrived  20:36:760 
+
+                                                                                                                                                           Cars :   (0 1)
+
+Red Car is on the bridge it has 2 seconds more  
+
+                                                                             Red Car with  has just arrived  20:37:760 
+
+Red Car has just finished 20:37:840
+
+                                                                                                                                                           Cars :   (0 1)
+
+Red Car has just start passing the bridge 20:37:842
+
+Red Car is on the bridge it has 1 seconds more  
+
+                                                                            Blue Car with  has just arrived  20:38:760 
+
+Red Car is on the bridge it has 2 seconds more  
+
+                                                                             Red Car with  has just arrived  20:39:760 
+
+Red Car has just finished 20:39:844
+
+                                                                                                                                                           Cars :   (0 2)
+
+Blue Car  has just start passing the bridge 20:39:846
+
+Blue Car  is on the bridge it has 1 seconds more  
+
+Blue Car  is on the bridge it has 2 seconds more  
+
+Blue Car  has just finished 20:41:847
+
+                                                                                                                                                           Cars :   (0 1)
+
+Red Car has just start passing the bridge 20:41:849
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 20:43:851
+
+Red Car has just start passing the bridge 20:43:853
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 20:45:855
+
+
+-For the fifth test we have an safe and fair simulation without adjstument with an arrival rate of 1 car per second and a transit time of 2 seconds .
+-Because is a safe proccess there is not going to have a conflict .
+-Because is a fair process without adjustment the cars  the cars are entering an alternate as it seems . For example when the red car finished at the moment  20:39:844
+ the blue car start which arrived at the moment 20:37:760 even though there is a red car in the queue
+
+
+Sixth Test
+
+
+Safe : true
+
+Fair : true
+
+Arrival rate :  1 car per 1
+
+Car transit time  : 2
+
+Adjustment  : true
+
+LimitAdjustment : 3
+
+
+
+
+Red Car has just finished 30:46:678
+
+Red Car has just start passing the bridge 30:46:679
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 30:48:680
+
+                                                                                                                                                           Cars :   (1 5)
+
+                                                                                                                                                                                                                     4 Red  adjustment
+                                                                                                                                                           Cars :   (1 4)
+
+Red Car has just start passing the bridge 30:48:686
+
+Red Car is on the bridge it has 1 seconds more  
+
+Red Car is on the bridge it has 2 seconds more  
+
+Red Car has just finished 30:50:688
+
+
+Comment Sixth Test 
+
+- For the sixth test we have an safe and fair simulation with adjstument and adjusment limit is  with an arrival rate of 1 car per second and a transit time of 2 seconds .
+- This test's parametres need for biggest number of cars to allow the adjustment to take place as a result we use 15 cars . However, a snapshot is shown only from the overall execution of the program that serves the purpose
+- As it seems at one moment we have 5 Red Cars and 1 Blue Cars  - Cars :   (1 5) - and the adjustment limit is  3  and  the difference is 4  ( higher than the limit as a result program implements a adjustment ) 
+  Without adjustment it should pass the blue car but because the program use the adjustment one red car start to passing again .
+
+
+Other Comments 
+
+if the rate of arrivals is lower than the transit time the unsafe process works without conflicts .
+
+
+
+Conclusion 
+
+This file records all the tests that were made with the different combinations of parameters that are meaningful. Altogether 6 tests were performed and commented.
+
+
+
+
+
+
+
